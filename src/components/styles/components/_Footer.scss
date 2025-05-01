@@ -1,0 +1,19 @@
+footer{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 13rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    img{
+        padding-top: 4.1rem;
+        height: 2.44rem;
+        width: 7.63rem;
+    }
+    p {
+        color: white;
+        padding-top: 1.8rem;
+    }
+}
