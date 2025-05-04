@@ -1,11 +1,7 @@
-import React from 'react';
+import { useParams } from 'react-router-dom';
 
 function Property() {
-    return (
-        <div>
-            <h1>Bienvenue sur la page logement</h1>
-        </div>
-    );
+    const { id } = useParams();
+    return <h1>Page de propriété avec l'ID: {id}</h1>;
 }
-
 export default Property;
