@@ -1,9 +1,9 @@
-import React from 'react';
+import { Banner } from '../components/Banner/Banner';
 
 export function About() {
     return (
-        <div>
-            <h1>Bienvenue sur la page à propos</h1>
-        </div>
+        <>
+            <Banner />
+        </>
     );
 }
