@@ -1,8 +1,7 @@
-import React from 'react';
-import Banner from '../Banner';
-import Gallery from '../Gallery';
+import { Banner } from '../Banner';
+import { Gallery } from '../Gallery';
 
-function Home() {
+export function Home() {
     return (
         <div className="home">
             <Banner />
@@ -12,5 +11,3 @@ function Home() {
         </div>
     )
 }
-
-export default Home;

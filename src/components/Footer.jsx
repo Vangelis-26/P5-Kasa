@@ -3,7 +3,7 @@ import Logo from '../assets/logo/logo-footer.svg';
 import './styles/components/_Footer.scss';
 
 
-function Footer() {
+export function Footer() {
     return (
         <footer>
             <img className='footer_img' src={Logo} alt="Logo Kasa" />
@@ -11,5 +11,3 @@ function Footer() {
         </footer>
     );
 }
-
-export default Footer;

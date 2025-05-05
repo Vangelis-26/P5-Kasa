@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import useFetchData from './data/fetchdata';
 import './styles/components/_Card.scss';
 
-function Card() {
+export function Card() {
     const { data, loading, error } = useFetchData('logements');
     if (loading) {
         return <div>Loading...</div>;
@@ -23,4 +23,3 @@ function Card() {
         ))
     );
 }
-export default Card;

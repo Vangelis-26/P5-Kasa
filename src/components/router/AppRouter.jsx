@@ -1,19 +1,35 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from '../pages/Home';
-import About from '../pages/About';
-import Property from '../pages/Property';
-import Error404 from '../pages/Error404';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Home } from '../pages/Home';
+import { About } from '../pages/About';
+import { Property } from '../pages/Property';
+import { Error404 } from '../pages/Error404';
+import { Layout } from "../Layout";
 
-function AppRouter() {
-    return (
-        <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/property/:id" element={<Property />} />
-            <Route path="*" element={<Error404 />} />
-        </Routes>
-    );
+const routerConfig = createBrowserRouter([
+    {
+        path: '/',
+        element: <Layout />,
+        children: [
+            {
+                index: true,
+                element: <Home />,
+            },
+            {
+                path: 'about',
+                element: <About />,
+            },
+            {
+                path: 'property/:id',
+                element: <Property />,
+            },
+            {
+                path: '*',
+                element: <Error404 />,
+            }
+        ]
+    }
+])
+
+export function AppRouter() {
+    return <RouterProvider router={routerConfig} />;
 }
-
-export default AppRouter; 
