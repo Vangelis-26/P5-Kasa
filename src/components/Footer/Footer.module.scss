@@ -1,17 +1,17 @@
-footer{
-    background-color: black;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    position: absolute;
-    .footer_img{
-        padding-top: 4.1rem;
-        height: 2.44rem;
-        width: 7.63rem;
-    }
-    .footer_copyright {
-        color: white;
-        padding-top: 1.8rem;
-    }
+footer {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  position: absolute;
+  .footer_img {
+    padding-top: 4.1rem;
+    height: 2.44rem;
+    width: 7.63rem;
+  }
+  .footer_copyright {
+    color: white;
+    padding-top: 1.8rem;
+  }
 }

@@ -1,22 +1,22 @@
-// @use "../_mixins" as mixins;
+@import "../../styles/main.scss";
 
 header {
-    display: flex;
-    justify-content: space-between;
-    margin: 3rem 6.25rem;
-    .header_nav {
-        ul {
-            list-style: none;
-            display: flex;
-            li {
-                margin: 0 1rem;
-                    &:hover {
-                        text-decoration: underline;
-                    }
-            }
-            .active-link {
-                text-decoration: underline;
-            }
+  @include margin;
+  display: flex;
+  justify-content: space-between;
+  .header_nav {
+    ul {
+      list-style: none;
+      display: flex;
+      li {
+        margin: 0 1rem;
+        &:hover {
+          text-decoration: underline;
         }
+      }
+      .active-link {
+        text-decoration: underline;
+      }
     }
+  }
 }

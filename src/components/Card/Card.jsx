@@ -15,7 +15,7 @@ export function Card() {
     return (
         data.map((logement) => (
             <Link to={`/logement/${logement.id}`} key={logement.id} className={styles.card}>
-                <div className="image-wrapper">
+                <div className={styles.image_wrapper}>
                     <img src={logement.cover} alt={logement.title} className={styles.card_image} />
                     <h2 className={styles.card_title}>{logement.title}</h2>
                 </div>

@@ -1,0 +1,30 @@
+// Marge de la page
+
+@mixin margin {
+  margin: 3rem 6.25rem;
+}
+// Mise en forme des styles de la bannière
+
+@mixin banner-styles {
+  margin: 3rem 6.25rem;
+  position: relative;
+  border-radius: 25px;
+  background-color: black;
+  height: 14rem;
+}
+
+@mixin banner-image-styles {
+  height: 14rem;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+  opacity: 0.6;
+}
+
+// Tailles des cartes logements
+
+@mixin card-size {
+  width: 340px;
+  height: 340px;
+  border-radius: 10px;
+}
