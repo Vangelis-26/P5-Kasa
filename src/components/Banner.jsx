@@ -5,8 +5,8 @@ import './styles/components/_Banner.scss';
 function Banner() {
     return (
         <div className="banner">
-            <img src={BannerImage} alt="Image Bannière" />
-            <div className='banner-text'>Chez vous, partout et ailleurs</div>
+            <img className='banner_img' src={BannerImage} alt="Image Bannière" />
+            <div className='banner_text'>Chez vous, partout et ailleurs</div>
         </div>
     );
 }

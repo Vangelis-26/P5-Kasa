@@ -1,14 +1,14 @@
 a {
     position: relative;
     width: 340px;
-    img {
+    .card_image {
         background-color: #FFFFFF;
         height: 340px;
         width: 340px;
         object-fit: cover;
         border-radius: 10px;
     }
-    .card-title {
+    .card_title {
         z-index: 2;
         font-size: 18px;
         position: absolute;

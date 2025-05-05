@@ -4,14 +4,14 @@
     border-radius: 25px;
     background-color: black;
     height: 14rem;
-    img {
+    .banner_img {
         height: 14rem;
         width: 100%;
         object-fit: cover;
         border-radius: 25px;
         opacity: 0.6;
     }
-    .banner-text {
+    .banner_text {
         position: absolute;
         top: 50%;
         left: 50%;
