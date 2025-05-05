@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
-import useFetchData from '../../data/fetchdata';
+import { PropertiesData } from '../../data/properties/DataProperties';
 import styles from './Card.module.scss';
 
 export function Card() {
-    const { data, loading, error } = useFetchData('logements');
+    const { data, loading, error } = PropertiesData('logements');
     if (loading) {
-        return <div>Loading...</div>;
+        return
     }
 
     if (error) {

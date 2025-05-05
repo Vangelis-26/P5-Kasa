@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import logementsData from './properties.json'; // Assurez-vous que le chemin est correct
+import logementsData from './properties.json';
 
-const useFetchData = (dataType, id) => {
+export function PropertiesData(dataType, id) {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -14,7 +14,7 @@ const useFetchData = (dataType, id) => {
                 } else if (dataType === 'logement' && id) {
                     const logement = logementsData.find(log => log.id === id);
                     if (logement) {
-                        setData([logement]); // Retourne un tableau avec un seul élément pour plus de cohérence
+                        setData([logement]);
                     } else {
                         setError(new Error('Logement non trouvé'));
                     }
@@ -29,9 +29,7 @@ const useFetchData = (dataType, id) => {
         };
 
         fetchData();
-    }, [dataType, id]); // Dépend de dataType et id
+    }, [dataType, id]);
 
     return { data, loading, error };
 };
-
-export default useFetchData;
