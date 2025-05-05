@@ -1,6 +1,6 @@
 import React from 'react';
-import { AppRouter } from './components/router/AppRouter';
-import './components/styles/components/pages/main.scss';
+import { AppRouter } from './router/AppRouter';
+import './styles/main.scss';
 
 
 

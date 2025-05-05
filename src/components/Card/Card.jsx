@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import useFetchData from './data/fetchdata';
-import './styles/components/_Card.scss';
+import useFetchData from '../../data/fetchdata';
+import styles from './Card.module.scss';
 
 export function Card() {
     const { data, loading, error } = useFetchData('logements');
@@ -14,10 +14,10 @@ export function Card() {
 
     return (
         data.map((logement) => (
-            <Link to={`/logement/${logement.id}`} key={logement.id} className="card">
+            <Link to={`/logement/${logement.id}`} key={logement.id} className={styles.card}>
                 <div className="image-wrapper">
-                    <img src={logement.cover} alt={logement.title} className="card_image" />
-                    <h2 className="card_title">{logement.title}</h2>
+                    <img src={logement.cover} alt={logement.title} className={styles.card_image} />
+                    <h2 className={styles.card_title}>{logement.title}</h2>
                 </div>
             </Link>
         ))

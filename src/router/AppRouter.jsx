@@ -3,7 +3,7 @@ import { Home } from '../pages/Home';
 import { About } from '../pages/About';
 import { Property } from '../pages/Property';
 import { Error404 } from '../pages/Error404';
-import { Layout } from "../Layout";
+import { Layout } from "../components/Layout";
 
 const routerConfig = createBrowserRouter([
     {
