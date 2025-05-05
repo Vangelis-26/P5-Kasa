@@ -1,25 +1,20 @@
+@import "../../styles/main.scss";
+
 .banner {
-    margin: 3rem 6.25rem;
-    position: relative;
-    border-radius: 25px;
-    background-color: black;
-    height: 14rem;
-    .banner_img {
-        height: 14rem;
-        width: 100%;
-        object-fit: cover;
-        border-radius: 25px;
-        opacity: 0.6;
-    }
-    .banner_text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        color: #FFFFFF;
-        font-size: 3rem;
-        font-weight: 700;
-    }
+  @include banner-styles;
+  .banner_img {
+    @include banner-image-styles;
+  }
+  .banner_text {
+    width: 100%;
+    font-size: 48px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $title-color;
+    padding: 10px;
+    text-align: center;
+    font-weight: 700;
+  }
 }
- 
