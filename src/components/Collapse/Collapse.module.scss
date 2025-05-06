@@ -2,6 +2,7 @@
 
 .quality {
   margin-bottom: 1.9rem;
+  position: relative;
   .quality_title {
     height: 2rem;
     display: flex;
@@ -26,12 +27,27 @@
     .close {
       transform: rotate(0deg);
     }
+    z-index: 1;
+    position: relative;
   }
   .quality_content {
+    z-index: 0;
     font-size: 18px;
-    margin: 0;
     padding: 20px;
     background-color: #f6f6f673;
     border-radius: 10px 5px;
+    margin-top: 0;
+    animation: slideDown 0.3s ease-in-out;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    max-height: 0;
+    transform: translateY(-1.5rem);
+  }
+  to {
+    max-height: 1000px;
+    transform: translateY(0);
   }
 }
