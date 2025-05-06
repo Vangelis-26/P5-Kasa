@@ -1,6 +1,6 @@
-import { Banner } from '../components/Banner/Banner';
-import { Collapse } from '../components/Collapse/Collapse';
-import { QualityData } from '../data/about/DataAbout'; // Assurez-vous que le chemin est correct
+import { Banner } from '../../components/Banner/Banner';
+import { Collapse } from '../../components/Collapse/Collapse';
+import { QualityData } from '../../data/about/DataAbout'; // Assurez-vous que le chemin est correct
 import styles from './About.module.scss';
 
 export function About() {
