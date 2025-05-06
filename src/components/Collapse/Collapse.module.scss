@@ -1,20 +1,37 @@
 @import "../../styles/variables.scss";
 
-.quality_title {
-  height: 3.25rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: $title-color;
-  background-color: #ff6060;
-  border-radius: 5px;
-  padding: 10px 20px;
-  h2 {
-    font-size: 24px;
+.quality {
+  margin-bottom: 1.9rem;
+  .quality_title {
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $title-color;
+    background-color: #ff6060;
+    border-radius: 5px;
+    padding: 10px 20px 10px 15px;
+    h2 {
+      font-size: 24px;
+    }
+    img {
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      transition: transform 0.4s;
+    }
+    .open {
+      transform: rotate(180deg);
+    }
+    .close {
+      transform: rotate(0deg);
+    }
   }
-  img {
-    width: 32px;
-    height: 32px;
-    cursor: pointer;
+  .quality_content {
+    font-size: 18px;
+    margin: 0;
+    padding: 20px;
+    background-color: #f6f6f673;
+    border-radius: 10px 5px;
   }
 }

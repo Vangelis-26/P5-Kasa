@@ -1,29 +1,21 @@
 import { useState } from 'react';
-import { QualityData } from "../../data/about/DataAbout";
 import styles from './Collapse.module.scss';
-import Up from '../../assets/vector/up.svg';
-import Down from '../../assets/vector/down.svg';
+import Vector from '../../assets/vector/vector.svg';
 
 
-export function Collapse() {
+export function Collapse({ title, content }) {
     const [toggle, setToggle] = useState(false);
 
-    const { data, loading, error } = QualityData('about');
-    if (loading) {
-        return <div>Loading...</div>;
-    }
-    if (error) {
-        return <div>Error: {error.message}</div>;
-    }
     return (
-        data.map((quality) => (
-            <div key={quality.id} className={styles.quality}>
-                <div className={styles.quality_title} >
-                    <h2 onClick={() => setToggle(!toggle)}>{quality.title} </h2>
-                    <img src={toggle ? Up : Down} />
-                </div>
-                <p className={styles.quality_content}>{quality.content}</p>
+        <div className={styles.quality}>
+            <div className={`${styles.quality_title} ${toggle ? styles.active_content : ''}`}>
+                <h2>{title}</h2>
+                <img
+                    src={Vector} onClick={() => setToggle(!toggle)}
+                    alt={toggle ? "Masquer le contenu" : "Afficher le contenu"}
+                    className={toggle ? styles.open : styles.close} />
             </div>
-        ))
+            {toggle && <p className={styles.quality_content}>{content}</p>}
+        </div>
     );
 }
