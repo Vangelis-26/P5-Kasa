@@ -1,4 +1,4 @@
-import { PropertyInfos } from "../../components/InfosProperty/InfosProperty";
+import { PropertyInfos } from "../components/InfosProperty/InfosProperty";
 
 export function Property() {
     return (

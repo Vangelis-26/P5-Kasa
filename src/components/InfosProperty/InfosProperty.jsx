@@ -1,6 +1,7 @@
 import { PropertiesData } from '../../data/properties/DataProperties';
 import { useParams } from 'react-router-dom';
 import { Collapse } from '../Collapse/Collapse';
+import { Rate } from '../Rate/Rate';
 import styles from './InfosProperty.module.scss';
 
 
@@ -27,7 +28,7 @@ export function PropertyInfos() {
 
     const logement = data[0];
     const tags = logement.tags || [];
-
+    console.log(logement.rating);
     return (
         <div className={styles.property}>
             <div className={styles.property_location}>
@@ -44,13 +45,15 @@ export function PropertyInfos() {
                 </div>
             </div>
             <div className={styles.property_allTags}>
-                {tags.map((tag, index) => (
-                    <div key={index} className={styles.property_tag}>
-                        {tag}
-                    </div>
-                ))}
+                <span>
+                    {tags.map((tag, index) => (
+                        <div key={index} className={styles.property_tag}>
+                            {tag}
+                        </div>
+                    ))}
+                </span>
+                <Rate rating={logement.rating} className={styles.property_rating} />
             </div>
-            {/* <Rate /> */}
             {data.map((item) => (
                 <div key={item.id} className={styles.property_collapse}>
                     <Collapse
