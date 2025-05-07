@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Home } from '../pages/Home';
 import { About } from '../pages/About/About';
-import { Property } from '../pages//Property/Property';
+import { Property } from '../pages/Property/Property';
 import { Error } from '../pages/Error/Error';
 import { Layout } from "../components/Layout";
 
@@ -19,7 +19,7 @@ const routerConfig = createBrowserRouter([
                 element: <About />,
             },
             {
-                path: 'property/:id',
+                path: 'logement/:id',
                 element: <Property />,
             },
             {
