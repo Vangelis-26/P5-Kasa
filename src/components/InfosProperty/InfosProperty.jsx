@@ -26,35 +26,42 @@ export function PropertyInfos() {
     }
 
     const logement = data[0];
+    const tags = logement.tags || [];
 
     return (
-        <div className={styles.propertyInfo}>
-            <div>
-                <h2 className={styles.propertyInfoTitle}>{logement.title}</h2>
-                <p>{logement.location}</p>
+        <div className={styles.property}>
+            <div className={styles.property_location}>
+                <div>
+                    <h2 className={styles.property_title}>{logement.title}</h2>
+                    <p className={styles.property_city}>{logement.location}</p>
+                </div>
+                <div className={styles.property_identity}>
+                    <div className={styles.property_identity_host}>
+                        <p>{logement.host.name.split(' ')[0]}</p>
+                        <p>{logement.host.name.split(' ')[1]}</p>
+                    </div>
+                    <img src={logement.host.picture} alt={logement.host.name} className={styles.property_identity_img} />
+                </div>
             </div>
-            <div>
-                <p className={styles.propertyInfoHost}>{logement.host.name}</p>
-                <img src={logement.host.picture} alt={logement.host.name} className={styles.propertyInfoHostImage} />
-            </div>
-            <div className={styles.propertyInfoTags}>
-                {logement.tags.map((tag, index) => (
-                    <span key={index} className={styles.propertyInfoTag}>{tag}</span>
+            <div className={styles.property_allTags}>
+                {tags.map((tag, index) => (
+                    <div key={index} className={styles.property_tag}>
+                        {tag}
+                    </div>
                 ))}
             </div>
             {/* <Rate /> */}
             {data.map((item) => (
-                <div key={item.id}>
+                <div key={item.id} className={styles.property_collapse}>
                     <Collapse
                         title="Description"
                         content={item.description}
                     />
                     <Collapse
-                        title="Description"
+                        title="Équipements"
                         content={equipements()}
                     />
                 </div>
             ))}
-        </div>
-    );
+        </div>);
 }
