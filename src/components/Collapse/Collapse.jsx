@@ -9,7 +9,7 @@ export function Collapse({ title, content }) {
     return (
         <div className={styles.quality}>
             <div className={`${styles.quality_title} ${toggle ? styles.active_content : ''}`}>
-                <h2>{title}</h2>
+                <h3>{title}</h3>
                 <img
                     src={Vector} onClick={() => setToggle(!toggle)}
                     alt={toggle ? "Masquer le contenu" : "Afficher le contenu"}

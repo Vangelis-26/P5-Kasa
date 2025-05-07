@@ -14,7 +14,7 @@ export function Banner() {
     return (
         <div className={styles.banner}>
             <img className={styles.banner_img} src={homepage ? BannerImageHome : BannerImageAbout} alt="Image Bannière" />
-            {homepage && (<div className={styles.banner_text}>Chez vous, partout et ailleurs</div>)}
+            {homepage && (<h1 className={styles.banner_text}>Chez vous, partout et ailleurs</h1>)}
         </div>
     );
 }
