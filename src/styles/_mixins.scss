@@ -6,14 +6,14 @@
 // Mise en forme des styles de la bannière
 
 @mixin banner-styles {
-  margin: 3rem 6.25rem;
-  position: relative;
+  margin: 0 6.25rem;
   border-radius: 25px;
   background-color: black;
   height: 14rem;
 }
 
 @mixin banner-image-styles {
+  display: block;
   height: 14rem;
   width: 100%;
   object-fit: cover;

@@ -1,8 +1,7 @@
 @import "../../styles/variables.scss";
 
 .quality {
-  margin-bottom: 1.9rem;
-  position: relative;
+  margin: 0 6.25rem;
   .quality_title {
     height: 2rem;
     display: flex;
@@ -36,7 +35,7 @@
     padding: 20px;
     background-color: #f6f6f673;
     border-radius: 10px 5px;
-    margin-top: 0;
+    margin: 0;
     animation: slideDown 0.3s ease-in-out;
   }
 }

@@ -2,19 +2,29 @@
 
 .banner {
   @include banner-styles;
+  position: relative;
   .banner_img {
     @include banner-image-styles;
   }
+}
+.banner_text {
+  box-sizing: border-box;
+  margin: 0;
+  width: 100%;
+  font-size: 48px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: $title-color;
+  padding: 10px;
+  text-align: center;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
   .banner_text {
-    width: 100%;
-    font-size: 48px;
-    position: absolute;
-    top: 35%;
-    left: 51%;
-    transform: translate(-50%, -50%);
-    color: $title-color;
-    padding: 10px;
-    text-align: center;
-    font-weight: 700;
+    width: 85%;
+    text-align: start;
   }
 }
