@@ -1,9 +1,9 @@
-import { PropertyInfos } from "../components/InfosProperty/InfosProperty";
+import { InfosProperty } from "../components/InfosProperty/InfosProperty";
 
 export function Property() {
     return (
         <>
-            <PropertyInfos />
+            <InfosProperty />
         </>
     );
 }

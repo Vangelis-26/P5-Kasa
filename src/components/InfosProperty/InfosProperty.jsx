@@ -1,11 +1,12 @@
 import { PropertiesData } from '../../data/properties/DataProperties';
 import { useParams } from 'react-router-dom';
-import { Collapse } from '../Collapse/Collapse';
+import { Slideshow } from '../Slideshow/Slideshow';
 import { Rate } from '../Rate/Rate';
+import { Collapse } from '../Collapse/Collapse';
 import styles from './InfosProperty.module.scss';
 
 
-export function PropertyInfos() {
+export function InfosProperty() {
     const { id } = useParams();
     const { data, loading, error } = PropertiesData('logement', id);
 
@@ -31,6 +32,7 @@ export function PropertyInfos() {
     console.log(logement.rating);
     return (
         <div className={styles.property}>
+            <Slideshow images={logement.pictures} />
             <div className={styles.property_location}>
                 <div>
                     <h2 className={styles.property_title}>{logement.title}</h2>
