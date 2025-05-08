@@ -1,7 +1,8 @@
-@import "../../styles/main.scss";
+@use "../../styles/mixins" as mixins;
+@use "../../styles/variables" as variables;
 
 .property {
-  @include margin;
+  @include mixins.margin;
   &_location {
     display: flex;
     justify-content: space-between;
@@ -10,7 +11,7 @@
   &_title {
     margin: 0;
     font-size: 36px;
-    color: $primary-color;
+    color: variables.$primary-color;
     font-weight: 500;
   }
   p {
@@ -24,7 +25,7 @@
       display: flex;
       flex-direction: column;
       text-align: end;
-      color: $primary-color;
+      color: variables.$primary-color;
       padding-right: 0.6rem;
     }
     &_img {
@@ -44,11 +45,25 @@
     }
   }
   &_tag {
-    background-color: $primary-color;
+    background-color: variables.$primary-color;
     padding: 0.4rem 1rem;
     border-radius: 50px;
     font-size: 14px;
-    color: $title-color;
+    color: variables.$title-color;
     font-weight: 700;
+  }
+}
+
+@media (max-width: 768px) {
+  .property {
+    &_location {
+      flex-direction: column;
+    }
+    &_identity {
+      align-items: end;
+    }
+  }
+  .quality {
+    margin: 0;
   }
 }

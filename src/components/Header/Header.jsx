@@ -12,7 +12,7 @@ export function Header() {
                     <li>
                         <NavLink
                             to="/"
-                            className={({ isActive }) => (isActive ? 'active-link' : '')}
+                            className={({ isActive }) => (isActive ? styles.active_link : '')}
                         >
                             Accueil
                         </NavLink>
@@ -20,7 +20,7 @@ export function Header() {
                     <li>
                         <NavLink
                             to="/about"
-                            className={({ isActive }) => (isActive ? 'active-link' : '')}
+                            className={({ isActive }) => (isActive ? styles.active_link : '')}
                         >
                             A Propos
                         </NavLink>

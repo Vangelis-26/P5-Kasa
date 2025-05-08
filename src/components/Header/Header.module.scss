@@ -1,7 +1,7 @@
-@import "../../styles/main.scss";
+@use "../../styles/mixins" as mixins;
 
 header {
-  @include margin;
+  @include mixins.margin;
   display: flex;
   justify-content: space-between;
   .header_nav {
@@ -14,9 +14,20 @@ header {
           text-decoration: underline;
         }
       }
-      .active-link {
+      .active_link {
         text-decoration: underline;
       }
     }
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    font-size: 12px;
+    $margin-mobile: 1.6rem;
+  }
+  img {
+    width: 21rem;
+    height: auto;
   }
 }

@@ -1,10 +1,11 @@
-@import "../../styles/main.scss";
+@use "../../styles/mixins" as mixins;
+@use "../../styles/variables" as variables;
 
 a {
   position: relative;
-  @include card-size;
+  @include mixins.card-size;
   .card_image {
-    @include card-size;
+    @include mixins.card-size;
     object-fit: cover;
   }
   .card_title {
@@ -13,14 +14,14 @@ a {
     position: absolute;
     left: 20px;
     bottom: 0;
-    color: $title-color;
+    color: variables.$title-color;
   }
   .image_wrapper::after {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    @include card-size;
+    @include mixins.card-size;
     background-image: linear-gradient(
       180deg,
       rgba(255, 255, 255, 0) 0%,

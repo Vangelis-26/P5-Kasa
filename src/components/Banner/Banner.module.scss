@@ -1,10 +1,11 @@
-@import "../../styles/main.scss";
+@use "../../styles/mixins" as mixins;
+@use "../../styles/variables" as variables;
 
 .banner {
-  @include banner-styles;
+  @include mixins.banner-styles;
   position: relative;
   .banner_img {
-    @include banner-image-styles;
+    @include mixins.banner-image-styles;
   }
 }
 .banner_text {
@@ -16,15 +17,25 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: $title-color;
+  color: variables.$title-color;
   padding: 10px;
   text-align: center;
   font-weight: 700;
 }
 
 @media (max-width: 768px) {
-  .banner_text {
-    width: 85%;
-    text-align: start;
+  .banner {
+    margin: variables.$margin-mobile;
+    height: 6.9rem;
+    .banner_img {
+      height: 6.9rem;
+      width: 21rem;
+    }
+    h1 {
+      font-size: 24px;
+      width: 35%;
+      text-align: start;
+      align-items: start;
+    }
   }
 }
