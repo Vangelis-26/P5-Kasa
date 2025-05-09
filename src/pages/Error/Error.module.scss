@@ -17,3 +17,19 @@
     text-decoration: underline;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .error {
+    text-align: center;
+    &_404 {
+      font-size: 96px;
+    }
+    &_message {
+      padding: 0 2rem;
+      font-size: 18px;
+    }
+    &_homeLink {
+      font-size: 14px;
+    }
+  }
+}
