@@ -1,7 +1,8 @@
-@import "../../styles/main.scss";
+@use "../../styles/mixins" as mixins;
+@use "../../styles/variables" as variables;
 
 .slideshow {
-  @include margin;
+  @include mixins.margin;
   margin: 0;
   position: relative;
   &_img {
@@ -39,3 +40,8 @@
     color: white;
   }
 }
+
+// @media screen and (max-width: 768px) {
+//   .slideshow {
+//   }
+// }
