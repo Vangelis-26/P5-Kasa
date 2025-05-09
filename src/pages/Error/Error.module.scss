@@ -21,7 +21,9 @@
 @media screen and (max-width: 768px) {
   .error {
     text-align: center;
+    gap: 7rem;
     &_404 {
+      margin-top: 7rem;
       font-size: 96px;
     }
     &_message {
