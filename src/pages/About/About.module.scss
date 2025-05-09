@@ -1,3 +1,5 @@
+@use "../../styles/variables" as variables;
+
 .about_quality {
   display: flex;
   flex-direction: column;
@@ -5,9 +7,10 @@
   margin: 2rem 12.5rem;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .about_quality {
-    margin: 2rem 0;
+    margin: variables.$margin-mobile;
     gap: 1rem;
+    padding-bottom: 2rem;
   }
 }
