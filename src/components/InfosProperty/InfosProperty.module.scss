@@ -4,8 +4,6 @@
 .property {
   @include mixins.margin;
   &_location {
-    display: flex;
-    justify-content: space-between;
     padding-bottom: 1.25rem;
   }
   &_title {
@@ -14,19 +12,30 @@
     color: variables.$primary-color;
     font-weight: 500;
   }
-  p {
+  & p {
     margin: 0;
     font-size: 18px;
   }
+  &_description {
+    display: flex;
+    justify-content: space-between;
+  }
   &_identity {
     display: flex;
-    align-items: center;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    justify-content: space-between;
     &_host {
       display: flex;
-      flex-direction: column;
       text-align: end;
       color: variables.$primary-color;
-      padding-right: 0.6rem;
+      &_name {
+        padding: 10px;
+      }
+    }
+    &_rating {
+      padding: 10px;
+      margin: 10px;
     }
     &_img {
       width: 64px;
@@ -35,8 +44,6 @@
     }
   }
   &_allTags {
-    display: flex;
-    justify-content: space-between;
     padding-bottom: 1.5rem;
     gap: 0.6rem;
     span {
@@ -51,6 +58,11 @@
     font-size: 14px;
     color: variables.$title-color;
     font-weight: 700;
+  }
+  &_collapse {
+    display: flex;
+    justify-content: space-between;
+    gap: 4.75rem;
   }
 }
 

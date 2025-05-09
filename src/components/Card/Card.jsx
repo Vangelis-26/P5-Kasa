@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
-import { PropertiesData } from '../../data/properties/DataProperties';
+import { usePropertiesData } from '../../data/properties/DataProperties';
 import styles from './Card.module.scss';
 
 export function Card() {
-    const { data, loading, error } = PropertiesData('logements');
+    const { data, loading, error } = usePropertiesData('logements');
     if (loading) {
         return
     }

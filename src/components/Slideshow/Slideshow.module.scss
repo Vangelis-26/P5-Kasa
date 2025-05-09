@@ -2,8 +2,7 @@
 @use "../../styles/variables" as variables;
 
 .slideshow {
-  @include mixins.margin;
-  margin: 0;
+  margin-bottom: 30px;
   position: relative;
   &_img {
     border-radius: 25px;

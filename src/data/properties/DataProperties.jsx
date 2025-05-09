@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import logementsData from './properties.json';
 
-export function PropertiesData(dataType, id) {
+export function usePropertiesData(dataType, id) {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);

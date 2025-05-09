@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import qualityData from '../../data/about/about.json'
 
-export function QualityData() {
+export function useQualityData() {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);

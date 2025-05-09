@@ -15,7 +15,7 @@ export function Collapse({ title, content }) {
                     alt={toggle ? "Masquer le contenu" : "Afficher le contenu"}
                     className={toggle ? styles.open : styles.close} />
             </div>
-            {toggle && <p className={styles.quality_content}>{content}</p>}
+            {toggle && <div className={styles.quality_content}>{content}</div>}
         </div>
     );
 }

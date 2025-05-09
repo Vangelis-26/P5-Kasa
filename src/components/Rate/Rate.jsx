@@ -3,7 +3,7 @@ import StarFull from '../../assets/rates/StarFull.svg';
 import StarEmpty from '../../assets/rates/starEmpty.svg';
 import styles from './Rate.module.scss';
 
-export function Rate({ rating }) {
+export function Rate({ rating, className }) {
 
     const totalStars = 5;
     const stars = []
@@ -16,7 +16,7 @@ export function Rate({ rating }) {
         }
     }
     return (
-        <div className={styles.rate}>
+        <div className={className} >
             {stars}
         </div>
     );
