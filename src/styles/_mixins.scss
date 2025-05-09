@@ -24,7 +24,13 @@
 // Tailles des cartes logements
 
 @mixin card-size {
-  width: 340px;
-  height: 340px;
+  width: 100;
+  height: 21rem;
+  border-radius: 10px;
+}
+
+@mixin card-size-mobile {
+  width: 18rem;
+  height: 13rem;
   border-radius: 10px;
 }

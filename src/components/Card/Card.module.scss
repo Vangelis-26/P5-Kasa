@@ -32,3 +32,19 @@ a {
     z-index: 1;
   }
 }
+
+@media screen and (max-width: 768px) {
+  a {
+    @include mixins.card-size-mobile;
+    margin-top: 1.25rem;
+    .card_image {
+      @include mixins.card-size-mobile;
+    }
+    .card_title {
+      font-size: 16px;
+    }
+    .image_wrapper::after {
+      @include mixins.card-size-mobile;
+    }
+  }
+}

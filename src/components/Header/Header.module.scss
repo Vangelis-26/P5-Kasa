@@ -26,10 +26,19 @@ header {
   header {
     font-size: 12px;
     align-items: center;
-    margin: variables.$margin-mobile;
+    margin: 1.25rem;
     box-sizing: border-box;
     img {
-      width: 145px;
+      height: 2.9rem;
+    }
+    .header_nav {
+      ul {
+        align-items: center;
+        padding: 0;
+      }
+      a {
+        margin: 0;
+      }
     }
   }
 }

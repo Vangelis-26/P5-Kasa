@@ -15,5 +15,7 @@
 @media (max-width: 768px) {
   .gallery {
     margin: variables.$margin-mobile;
+    padding: 0;
+    gap: 0;
   }
 }
