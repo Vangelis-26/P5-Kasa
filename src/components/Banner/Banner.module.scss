@@ -27,15 +27,16 @@
   .banner {
     margin: variables.$margin-mobile;
     height: 6.9rem;
+    width: 21rem;
     .banner_img {
       height: 6.9rem;
       width: 21rem;
     }
-    h1 {
+    .banner_text {
       font-size: 24px;
-      width: 35%;
+      width: 75%;
+      left: 40%;
       text-align: start;
-      align-items: start;
     }
   }
 }
