@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { Home } from '../pages/Home';
+import { Home } from '../pages/Home/Home';
 import { About } from '../pages/About/About';
 import { Property } from '../pages/Property';
 import { Error } from '../pages/Error/Error';
