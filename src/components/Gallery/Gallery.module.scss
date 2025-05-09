@@ -10,12 +10,13 @@
   justify-content: center;
   padding: 3rem;
   gap: 3rem;
+  margin-top: 1.25rem;
 }
 
 @media (max-width: 768px) {
   .gallery {
     margin: variables.$margin-mobile;
-    padding: 0;
-    gap: 0;
+    padding: 1.25rem;
+    gap: 1rem;
   }
 }

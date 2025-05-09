@@ -13,10 +13,17 @@ footer {
   .footer_copyright {
     color: white;
     padding-top: 1.8rem;
+    text-align: center;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
   footer {
+    .footer_copyright {
+      font-size: 12px;
+      padding: 0;
+      width: 132px;
+      text-align: center;
+    }
   }
 }

@@ -36,7 +36,6 @@ a {
 @media screen and (max-width: 768px) {
   a {
     @include mixins.card-size-mobile;
-    margin-top: 1.25rem;
     .card_image {
       @include mixins.card-size-mobile;
     }
