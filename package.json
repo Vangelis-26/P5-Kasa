@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://vangelis-26.github.io/P5-Kasa",
+  "homepage": "https://Vangelis-26.github.io/P5-Kasa",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
