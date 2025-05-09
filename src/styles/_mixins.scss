@@ -1,12 +1,12 @@
 // Marge de la page
 
 @mixin margin {
-  margin: 3rem 6.25rem;
+  margin: 2rem 6.25rem;
 }
 // Mise en forme des styles de la bannière
 
 @mixin banner-styles {
-  margin: 0 6.25rem;
+  margin: 0 6.25rem 2.5rem 6.25rem;
   border-radius: 25px;
   background-color: black;
   height: 14rem;
