@@ -24,8 +24,8 @@ export function InfosProperty() {
 
     const equipements = data.map((item) => {
         return item.equipments.map((equipement, index) => (
-            <div key={index} className={styles.propertyInfoEquipements}>
-                <p>{equipement}</p>
+            <div key={index} >
+                <p className={styles.equipements} >{equipement}</p>
             </div>
         ));
     });

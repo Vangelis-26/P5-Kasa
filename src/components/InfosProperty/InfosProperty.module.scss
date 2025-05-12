@@ -66,29 +66,19 @@
   }
 }
 
-@media (max-width: 768px) {
-  .property {
-    &_location {
-      flex-direction: column;
-    }
-    &_identity {
-      align-items: end;
-    }
-  }
-  .quality {
-    margin: 0;
-  }
-}
-
 @media screen and (max-width: 768px) {
   .property {
     margin: variables.$margin-mobile;
     &_description {
       flex-direction: column;
     }
+    &_location {
+      flex-direction: column;
+    }
     &_identity {
       flex-direction: row;
       padding-bottom: 13px;
+      align-items: end;
       &_host_name p {
         font-size: 12px;
       }
@@ -117,8 +107,11 @@
       flex-direction: column;
       gap: 0;
     }
-    .quality_content {
+    .equipements {
       font-size: 12px;
     }
+  }
+  .quality {
+    margin: 0;
   }
 }
