@@ -5,6 +5,7 @@ import { Property } from '../pages/Property';
 import { Error } from '../pages/Error/Error';
 import { Layout } from "../components/Layout";
 
+const repoName = import.meta.env.PROD ? '/P5-Kasa' : '/';
 const routerConfig = createBrowserRouter([
     {
         path: '/',
@@ -28,7 +29,9 @@ const routerConfig = createBrowserRouter([
             }
         ]
     }
-])
+], {
+    basename: repoName,
+})
 
 export function AppRouter() {
     return <RouterProvider router={routerConfig} />;
