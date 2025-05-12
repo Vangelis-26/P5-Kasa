@@ -1,5 +1,5 @@
 import { usePropertiesData } from '../../data/properties/DataProperties';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { Slideshow } from '../Slideshow/Slideshow';
 import { Rate } from '../Rate/Rate';
 import { Collapse } from '../Collapse/Collapse';
@@ -9,9 +9,14 @@ import styles from './InfosProperty.module.scss';
 export function InfosProperty() {
     const { id } = useParams();
     const { data, loading, error } = usePropertiesData('logement', id);
+    const navigate = useNavigate();
 
     if (loading) {
         return <div>Loading...</div>;
+    }
+    if (error && error.message === 'Logement non trouvé') {
+        navigate('/error');
+        return null;
     }
     if (error) {
         return <div>Error: {error.message}</div>;
